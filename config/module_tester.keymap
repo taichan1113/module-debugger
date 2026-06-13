@@ -7,7 +7,7 @@
         volume_up_down: volume-up-down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
         };
     };
 
@@ -15,7 +15,8 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <&bl BL_CYCLE>;
+            // bindings = <&bl BL_CYCLE>; // <- LED
+            bindings = <&kp C_MUTE>; //<- ENCODER
             sensor-bindings = <&volume_up_down>;
         };
     };
