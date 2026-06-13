@@ -1,20 +1,28 @@
-# This file generates the GitHub Actions matrix.
-# For simple board + shield combinations, add them to the top level board and
-# shield arrays, for more control, add individual board + shield combinations
-# to the `include` property. You can also use the `cmake-args` property to
-# pass flags to the build command, `snippet` to add a Zephyr snippet, and
-# `artifact-name` to assign a name to distinguish build outputs from each other:
-#
-# board: [ "nice_nano" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano
-#     shield: reviung41
-#   - board: nice_nano
-#     shield: corne_left
-#     snippet: studio-rpc-usb-uart
-#     cmake-args: -DCONFIG_ZMK_STUDIO=y
-#     artifact-name: corne_left_with_studio
-#
 ---
+include:
+  - board: seeeduino_xiao_ble
+    shield: module_tester
+    snippet: pwm_led_key
+    artifact-name: module_tester_pwm_led_key
+
+  - board: seeeduino_xiao_ble
+    shield: module_tester
+    snippet: ec11_external_pullup
+    artifact-name: module_tester_ec11_external_pullup
+
+  - board: seeeduino_xiao_ble
+    shield: module_tester
+    snippet: trackball_pmw3610_alt
+    artifact-name: module_tester_trackball_pmw3610_alt
+
+  - board: seeeduino_xiao_ble
+    shield: module_tester
+    snippet: trackball_pat9125
+    artifact-name: module_tester_trackball_pat9125
+
+  - board: seeeduino_xiao_ble
+    shield: module_tester
+    snippet: trackball_paw3222
+    artifact-name: module_tester_trackball_paw3222
+
+

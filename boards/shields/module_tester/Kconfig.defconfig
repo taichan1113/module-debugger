@@ -1,0 +1,16 @@
+if SHIELD_MODULE_TESTER
+
+config ZMK_KEYBOARD_NAME
+    default "module_tester"
+
+endif
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT

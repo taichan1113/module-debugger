@@ -1,0 +1,4 @@
+name: ec11_external_pullup
+append:
+  EXTRA_DTC_OVERLAY_FILE: ec11_external_pullup.overlay
+  EXTRA_CONF_FILE: ec11_external_pullup.conf

@@ -1,0 +1,6 @@
+&encoder {
+    status = "okay";
+    a-gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
+    b-gpios = <&gpio1 14 GPIO_ACTIVE_HIGH>;
+    steps = <60>;
+};
