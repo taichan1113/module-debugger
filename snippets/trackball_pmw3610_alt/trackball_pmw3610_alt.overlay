@@ -1,8 +1,8 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
-#include <input/processors/report_rate_limit.dtsi>
-#include <input/processors/xyz.dtsi>
+// #include <input/processors/report_rate_limit.dtsi>
+// #include <input/processors/xyz.dtsi>
 #include "../pinctrl_spi.dtsi"
 #include "../listeners.dtsi"
 
@@ -16,10 +16,10 @@
 
     trackball_pmw3610: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610-alt";
+        compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <1500000>;
-        irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        irq-gpios = <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <800>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -35,14 +35,14 @@
         = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>
         ;
 
-    scroller {
-        layers = <1>;
-        input-processors
-            = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>
-            , <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>
-            , <&zip_xy_to_scroll_mapper>
-            ;
-    };
+    // scroller {
+    //     layers = <1>;
+    //     input-processors
+    //         = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>
+    //         , <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>
+    //         , <&zip_xy_to_scroll_mapper>
+    //         ;
+    // };
 };
 
 // &listener_peripheral {

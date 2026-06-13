@@ -10,16 +10,15 @@ include:
   #   snippet: trackball_pat9125
   #   artifact-name: module_tester_trackball_pat9125
 
-  - board: seeeduino_xiao_ble
-    shield: module_tester
-    snippet: ec11_external_pullup
-    artifact-name: module_tester_ec11_external_pullup
-
   # - board: seeeduino_xiao_ble
   #   shield: module_tester
-  #   snippet: trackball_pmw3610_alt
-  #   artifact-name: module_tester_trackball_pmw3610_alt
+  #   snippet: ec11_external_pullup
+  #   artifact-name: module_tester_ec11_external_pullup
 
+  - board: seeeduino_xiao_ble
+    shield: module_tester
+    snippet: trackball_pmw3610_alt
+    artifact-name: module_tester_trackball_pmw3610_alt
 
   # - board: seeeduino_xiao_ble
   #   shield: module_tester
